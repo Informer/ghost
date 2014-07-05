@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[James Heffernan Portfolio.. Talking Point]]></title><description><![CDATA[Talking point is the "coffee corner" of my portfolio site. I wanted a place to talk about industry or the how-to's of some of my projects.]]></description><link>http://my-ghost-blog.com/</link><generator>Ghost v0.4.2</generator><lastBuildDate>Sat, 05 Jul 2014 14:01:35 GMT</lastBuildDate><atom:link href="http://my-ghost-blog.com/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[GhostBusters]]></title><description><![CDATA[<p>This tutorial is really short. First download Buster. To do so open your terminal and type:</p>
+
+<pre><code>    sudo easyinstall pip
+</code></pre>
+
+<p>You need pip a python packaging manager to install Buster. <br />
+Now run the command:</p>
+
+<pre><code>    pip install buster
+</code></pre>
+
+<p>This will take a minute or so. When Buster is installed it is first important that you have made your Ghost blog and added pages. If you need to add a custom domain, you can but I will not cover that here.</p>
+
+<p>When your site is ready to generate a static version run the command:</p>
+
+<pre><code>    buster generate --domain=http://127.0.0.1:2368 
+</code></pre>
+
+<p>This will generate static files ready for upload to Github. Then pass</p>
+
+<pre><code>    buster deploy
+</code></pre>
+
+<p>to finish. Sin é. </p>]]></description><link>http://my-ghost-blog.com/ghostbusters/</link><guid isPermaLink="false">61f05ee7-9ac2-4bde-9fa5-18901c84971b</guid><dc:creator><![CDATA[James Heffernan]]></dc:creator><pubDate>Sat, 05 Jul 2014 13:32:38 GMT</pubDate></item><item><title><![CDATA[Blogging]]></title><description><![CDATA[<p>So now I had the skeleton for my site but I was missing one crutial piece of the puzzle. </p>
+
+<p>A Blog.</p>
+
+<p>I love to write and to discuss. I admire those who recognise the value for what they do, but also realise their responsibilty to give something back. <br />
+This is what I wanted from this blog space. I place where people could go and learn about what I did, how I did it and why I did it.</p>
+
+<p>I wanted a clean simple cms. I thought of building one and had just started using Pelican when, I remembered signing up for Ghost while it was in Beta testing. I had not had the opportunity to explore the platfrom. Maybe with a bit of tweaking this might work.</p>
+
+<p>I downloaded Ghost onto my mac, you need node.js to be installed before you can use it. From here I could access the blogs html, css and configuration files.</p>
+
+<p>COOool. Ghost was exactly what I wanted. A nice dashboard, simple and built for writing. Like Tumblr it has a nice to-the-point interface, stripping out the bloat that other platforms like Wordpress and Blogger carry around with them.</p>
+
+<p>I know what your thinking... James a blogging site is dynamic you can't host it on Github.... or can I? <br />
+I am very grateful to fellow Githubber axitkhurana who wrote a fabulous static site generator for Ghost, called Buster.</p>
+
+<p>So for you too to become cool GhostBusters follow my next post.</p>]]></description><link>http://my-ghost-blog.com/blogging/</link><guid isPermaLink="false">c77dc67f-eb2a-4313-afa3-c01fcb2f3eec</guid><dc:creator><![CDATA[James Heffernan]]></dc:creator><pubDate>Sat, 05 Jul 2014 13:21:41 GMT</pubDate></item><item><title><![CDATA[Oops a Typo..]]></title><description><![CDATA[<p>After 10 minutes the site was live! <br />
+Clicking through everything ran super smooth then.... no a typo. One of the links was dead.</p>
+
+<p>It was really no big deal. I had two options. I could find the file on my mac , fix the typo and re-upload OR use the github site itself. </p>
+
+<p>If you find a typo open the file in your repo - while on the github site and hit edit.</p>
+
+<p>Boom you can fix your page, save it and it is back online. <br />
+Github you're a life saver. :)</p>]]></description><link>http://my-ghost-blog.com/oops-a-typo/</link><guid isPermaLink="false">c1eb1581-e222-48fe-a435-d6a0fac93a3e</guid><dc:creator><![CDATA[James Heffernan]]></dc:creator><pubDate>Sat, 05 Jul 2014 13:10:24 GMT</pubDate></item><item><title><![CDATA[Phase 3]]></title><description><![CDATA[<p>Ok so I had the site, and it is dynamic. Whenever I upload a new piece of work on Behance it updates my website too - nice.</p>
+
+<p>But it is still on my mac. That is not very helpful for the rest of the world, who would have to wait until I turn on my mac to see it. Hmm we need a host.</p>
+
+<p>As the site is making its dynamic calls using javascript we no longer need to worry about finding a hosting package that includes a server side language like php or database functionality like mySQL.</p>
+
+<p>Awesome now I can use GitHub!</p>
+
+<p>So how do I get my site online? Here is how I did it.</p>
+
+<p><li>The first thing you need is a Github account. Remember to verify your email! <br />
+<li>Next you need to make a respository. It is pretty easy, just click the button.</p>
+
+<p>Ok from here you have 2 options. You can use the terminal (command line if on PC ) to push files to this space <strong>or</strong> download the Github application for your system.</p>
+
+<p>I used the method which made the most sense to my workflow, which in this case was the terminal. <br />
+<em>An obvious point to note is that your website should be all in 1 folder</em>, just in case you have missed that <strong>very basic</strong> web design step.</p>
+
+<p>Ok in the terminal change to your project directory/folder by passing this simple command:</p>
+
+<pre><code>    cd /insert/your/project/directory/portfolio
+</code></pre>
+
+<p>A nice trick, to save your fingers typing out every path is just to type cd in the terminal, find the folder and then drag it into the terminal window. Boom you have the path. </p>
+
+<p>Now hit <code>enter</code>. You are now inside your website folder. <br />
+Ok we need to initialise Git pass the following command by typing and hitting enter... From now on assume if I say pass a command that you hit enter... cool? ..Great.</p>
+
+<pre><code>    git init
+</code></pre>
+
+<p>We now need to setup a remote origin. This basically tells Github where  the files that <em>will</em> be in your repository came from.</p>
+
+<pre><code>     git remote add origin https://github.com/yourUserName/YourRepositoryName.git
+</code></pre>
+
+<p>Awesome you are doing really well, next we need to make a branch to store our files withing the repo. To do that you pass the simple command:</p>
+
+<pre><code>    git checkout -b -gh-pages
+</code></pre>
+
+<p>This makes a new branch with the parameter <code>-b</code> with the name <code>gh-pages</code>. This is really important. In Github there are 2 types of pages: User and Project. You can only make 1 user page BUT your can make as many project pages as you need. If you do not call the branch for your site <code>gh-pages</code> it will not work.</p>
+
+<p>If you need to check the status of your repo, like did I delete or upload files you can by passing:</p>
+
+<pre><code>    git status
+</code></pre>
+
+<p>Run this command followed by:</p>
+
+<pre><code>    git add .
+</code></pre>
+
+<p>Remember the <code>.</code> this adds all the files in the directory. Only two more commands and you will have a fully functional website!!</p>
+
+<p>Next up we need to tell Github why these files were uploaded. So we might give it the tag original or version 1 or something meaningful to you.</p>
+
+<p>When you have thought of something pass this command:</p>
+
+<pre><code>git commit -m "orignal commit"
+</code></pre>
+
+<p>As you can see, I'm just giving mine the tag <code>original commit</code>. <br />
+Finally we need to "push" the files to Github with one single final command:</p>
+
+<pre><code>git push origin gh-pages
+</code></pre>
+
+<p>You will probably see lots of file paths whoose up the terminal window. Don't fret that means that it is working. You will be able to see how fast the transfer is in the final lines of the terminal.</p>
+
+<p>Upon completion you must wait 10mins before your site is live. You can check that the files entered your repository correctly by navigating to your github page and clicking on your repo.</p>
+
+<pre><code>        github.com/yourUsername/yourRepositoryName
+</code></pre>]]></description><link>http://my-ghost-blog.com/phase-3/</link><guid isPermaLink="false">29771d00-cb92-4092-a12b-bc1950039186</guid><dc:creator><![CDATA[James Heffernan]]></dc:creator><pubDate>Sat, 05 Jul 2014 12:31:46 GMT</pubDate></item><item><title><![CDATA[Phase 2]]></title><description><![CDATA[<p>The next step was writing the code. I knew that I wanted to make the site responsive. That is that the site changes its css or styling depending on the device that the user is viewing the site on.</p>
+
+<p>As a developer I am fluent in several languages and can figure out the basics of ones that I may not be as savy with. <br />
+So Yes this was not ever going to be a Dreamweaver or Adobe Edge job. I want to know what is going on and where the action is happening.</p>
+
+<p>The first step in my process was to make a pdf (or image copy) of my designs and set it to desktop 2 on my macbook pro.</p>
+
+<p><img src='http://my-ghost-blog.com/'  alt="setup desktop 2" /></p>
+
+<pre><code>    Mac Only 10.8+ =&gt; hit F3 and move cursor to far right click "+" button
+</code></pre>
+
+<p>For development this has become a must have. <br />
+With that setup I opened my text editor, in this case it is Sublime Text. To make a site experience universal we have 2 options.</p>
+
+<p><li> Responsive site. 
+<li> Adaptive site.</p>
+
+<p>What are the differences? Basically a responsive site works off a single css file that scales content based on the screen size. An adaptive site on the other hand keeps several css sheets for different resolutions. Each sheet is utilised when its respective viewport is selected.</p>
+
+<p>I decided to go with the responsive method as I have created other websites with this method in mind. That is not to say that an adaptive system would not have done as good a job. It is just a matter of taste. <a href='http://informer.github.io/portfolio/responsive_frameworks.html' >Click here</a> to see some responsive frameworks I recommend.</p>
+
+<p>To speed things up I used a responsive framework named "Element". It is just a grid css file. With the basic grid defined I could start customising and creating my design.</p>
+
+<p>After coding out my design I had a few little tweaks that needed to be made. To show off my programming I employed a two stage design structure. The first of which is now completed. On one side of the page is a code editor viewer, where my code is displayed and on the other is a description of what the code does. Stage 2 will include a code highlighter that on mouseover or touch will change a graphic which illustrates what the code does.</p>
+
+<p>I thought this was a very important addition that is not utilised on code portfolio sites like Github to-date. For the programmer, seeing clever well written code is enough but to business people who may not know what this jibber jabber does, a graphic is much more appealing.</p>
+
+<p>To get the code editor working I used a javascript plugin called "prism.js". This is a syntax highligher. I later added a custom script to add the line numbers.</p>
+
+<p>To accept touch events instead of mouse events I included the moderniser.js plugin in my code.</p>
+
+<p>However possibly the most amazing use of javascript I came across was handlebars.js <br />
+This I used to make http calls to the behance API. <br />
+How is that useful? <br />
+Well as I mentioned in my first post a lot of my digital content is scattered across different services. Now on design principle it does not make sense downloading all this content and re-uploading it to a new host with my new site. It has a home. Why not utilise it?</p>
+
+<p>Behance offer a very good api, where once you have signed up for a developer account and snatched your api key you can dibble dabble in some very cool projects.</p>
+
+<p>If you have never tinkered with api's before, at first glance you may be put off, but believe me they are really awesome once you get the hang of it. <a href='http://codeacademy.com/' >CodeAcademy</a> is a elearning site that I constantly sing praise for. The tutorials are well written, the interface is fresh and it is interactive. As a code learning experience it is a must and whatmore they have plenty of very nice API tutorials to get you going.</p>]]></description><link>http://my-ghost-blog.com/phase-2/</link><guid isPermaLink="false">648975f3-bda6-49e4-ba52-e7e834d6c561</guid><dc:creator><![CDATA[James Heffernan]]></dc:creator><pubDate>Fri, 04 Jul 2014 17:11:39 GMT</pubDate></item><item><title><![CDATA[Welcome to My Blog]]></title><description><![CDATA[<p>Today's entry will discuss how this site as a whole was created and published. The post following this will discuss the overall plan and what improvements are being finalised for the portfolio section.  </p>
+
+<h2 id="gettingstarted">Getting Started</h2>
+
+<p>One of the first problems every project has is: what tools are best suited and why? <br />
+Both questions are essential to the design and development process and both questions help to answer potential issues down the line, if they are tackled early on.</p>
+
+<p>I wanted to created a space that so-far I have not seen online. I needed a space where I could show case my design work <strong>and</strong> my programming projects. Although I did not feel showcasing was good enough. Most design portfolio's show the finished piece slapped beside lots of other finished pieces. That may work for a graphic designer or illustrator, but as a Multimedia designer/developer I make stuff that sometimes moves.. that sometimes is dynamic and at other times is static.</p>
+
+<p>At present to showcase my work I found that I was utilising many different services. Audio work is on soundcloud, videos on youtube and vimeo, graphical elements are found on pinterest, behance, deviantart and my personal blogs.</p>
+
+<p>As a designer is was obvious how big of a design flaw this experience was. Asking someone to traverse the internet, chasing your work simply is not good enough.</p>
+
+<p>SO I set off to design an experience. This project started in my final year of college. It is on-going. Admitting that something as subjective as a portfolio space is a continous process is perhaps  the first step to making a good experience. By excepting this truth, you are accepting that it all does not have to be done at once.</p>
+
+<p>As the site currently stands, it is a HTML5 site with some JQuery added where needed. The experience is mild and banal. This is about to change. I decided it better to start the hub than to wait for all the assets to be complete. While a flat 2d experience with a little bit of javascript magic anchors the web page  at present a 3D walk-around is being tested, and will replace this version in the coming weeks, but we will discuss this later on.</p>
+
+<h3 id="howdididoit">How did I do it?</h3>
+
+<p>As I said the ideal experience was where I started. So I wanted a shared hub, but I want it to feel more like you walked into my studio, not like you're staring at the window of my studio.</p>
+
+<p>To do this we need atmosphere.</p>
+
+<p>I made a playlist up of ambient "working" tunes that I avidly listen to and posted it on Grooveshark and on Spotify. Both allow their users to utilise a version of their web players for website embedding. Ok cool this adds dynamism. <strong><em>This turned out to be the first consideration</em></strong>. </p>
+
+<p><li>A dynamic site do I need it?</p>
+
+<p>Yes was the answer, <em>however</em> :</p>
+
+<p><li> Where can I host a dynamic site for free?</p>
+
+<p>Oops.. not many places. <br />
+Then I got an idea. Why not host the site as a Github repository? <br />
+The only downfall is that Github pages do not accept dynamic pages... hmm only half the battle.</p>
+
+<p>Knowing that I had a fully functioning host though spurred me on to the design phase. Perhaps I might realise just how much could be achieved with a static site.</p>
+
+<p>I began the process with my little brown sketch book (where most of my creative ideas are journaled). Before building the first phase I mocked-up the site using photoshop. I have put a sample of my WIPS from this stage on (behance) [behance.net/jheff/wip].</p>
+
+<hr />]]></description><link>http://my-ghost-blog.com/welcome-to-ghost/</link><guid isPermaLink="false">3fee37b1-47f5-44a5-a5db-670a1a16f0c4</guid><dc:creator><![CDATA[James Heffernan]]></dc:creator><pubDate>Fri, 04 Jul 2014 14:14:55 GMT</pubDate></item></channel></rss>
